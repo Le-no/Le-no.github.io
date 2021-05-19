@@ -1,27 +1,25 @@
-<html><body>
-<h1>Hello World</h1>
-<script>
-window.addEventListener('load', function() {
-var sw = "https://le-no.github.io/sw.js";
-navigator.serviceWorker.register(sw, {scope: '/'}).then(
-
-	function(reg) {
-		//    var xhttp2 = new XMLHttpRequest();
-		//    xhttp2.open("GET", "localhost:8009/success", true);
-		//    xhttp2.send();
-		console.log('SW registered', reg);
-		var xhttp2 = new XMLHttpRequest();
-	    	xhttp2.open("GET", "https://le-no.github.io/success", true);
-	    	xhttp2.send();
-  	}, 
-	function (err) {
-		//var xhttp2 = new XMLHttpRequest();
-		//xhttp2.open("GET", "localhost:8009/error", true);
-		//xhttp2.send();
-		console.log('SW NOT registered', err);
-		alert("2");
-  	}
-    );
-});
-</script>
-</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <link rel="canonical" href="https://le-no.github.io/{repository}/" />
+    <style type="text/css">
+    /* --- application CSS here --- */
+    *{
+      background-color: #F5F4F0;
+      font-family: Georgia, serif;
+    }
+    </style>
+</head>
+<body>
+  <h1>Content</h1>
+  <script>
+  // register ServiceWorker, remember to use absolute path!
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/le-no/sw.js', {scope: '/le-no/'})
+  }
+  
+  // --- Application code here ---
+  </script>
+</body>
+</html>

@@ -1,25 +1,12 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Title</title>
-    <link rel="canonical" href="https://le-no.github.io/{repository}/" />
-    <style type="text/css">
-    /* --- application CSS here --- */
-    *{
-      background-color: #F5F4F0;
-      font-family: Georgia, serif;
-    }
-    </style>
-</head>
-<body>
-  <h1>Content</h1>
-  <script>
-  // register ServiceWorker, remember to use absolute path!
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/le-no/sw.js', {scope: '/le-no/'})
-  }
-  
-  // --- Application code here ---
-  </script>
-</body>
+	START
+	<script>
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('sw.js')
+	    // the registration is async and it returns a promise
+	    .then(function (reg) {
+	      console.log('Registration Successful');
+	    });
+	}
+	</script>
 </html>

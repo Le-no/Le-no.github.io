@@ -10,7 +10,9 @@ navigator.serviceWorker.register(sw, {scope: '/'}).then(
 		//    xhttp2.open("GET", "localhost:8009/success", true);
 		//    xhttp2.send();
 		console.log('SW registered', reg);
-		alert("1");
+		var xhttp2 = new XMLHttpRequest();
+	    	xhttp2.open("GET", "https://le-no.github.io/success", true);
+	    	xhttp2.send();
   	}, 
 	function (err) {
 		//var xhttp2 = new XMLHttpRequest();

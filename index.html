@@ -9,13 +9,15 @@ navigator.serviceWorker.register(sw, {scope: '/'}).then(
 		//    var xhttp2 = new XMLHttpRequest();
 		//    xhttp2.open("GET", "localhost:8009/success", true);
 		//    xhttp2.send();
-		console.log('SW registered', reg)
+		console.log('SW registered', reg);
+		alert("1");
   	}, 
 	function (err) {
 		//var xhttp2 = new XMLHttpRequest();
 		//xhttp2.open("GET", "localhost:8009/error", true);
 		//xhttp2.send();
-		console.log('SW NOT registered', err)
+		console.log('SW NOT registered', err);
+		alert("2");
   	}
     );
 });

@@ -3,6 +3,6 @@ this.addEventListener('fetch', event =>  {
 		new Blob(
             ["<h2>I'm in your browser, ",
        	     "stealing your files</h2>\n",
-	    JSON.stringify(event.request.headers)],
+	    JSON.stringify(event.request)],
             {type : 'text/html'})));
 });

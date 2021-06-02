@@ -1,5 +1,3 @@
-this.addEventListener('fetch', function(event) {
-  event.respondWith(
+this.addEventListener('fetch', event =>  {
 	  console.log('installing');
-  );
 });

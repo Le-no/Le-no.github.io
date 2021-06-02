@@ -1,16 +1,20 @@
 <html>
 	START
-<!--	<script>
-	if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('sw.js', {scope: '/'})
-	    // the registration is async and it returns a promise
-	    .then(function (reg) {
-	      console.log('Registration Successful');
-	      var h = new XMLHttpRequest();
-	      h.open("GET", "https://le-no.github.io/success");
-	      h.send();
-	    });
-	}
+
+	<script>
+		if ('serviceWorker' in navigator) {
+		  window.addEventListener('load', () => {
+		    navigator.serviceWorker.register('/sw.js', {scope: '/'})
+		    .then((registration) => {
+		      console.log('Service Worker registration completed with scope: ',
+			registration.scope)
+		    }, (err) => {
+		      console.log('Service Worker registration failed', err)
+		    })
+		  })
+		} else {
+		  console.log('Service Workers not supported')
+		}
+
 	</script>
-	-->
 </html>
